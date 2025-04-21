@@ -16,7 +16,9 @@
     "src/",
     "typings/",
     "Cargo.toml",
-    "Cargo.lock"
+    "Cargo.lock",
+    "tsconfig.release.json",
+    "tsconfig.json"
   ],
   "scripts": {
     "clean": "rimraf build native",
@@ -27,7 +29,7 @@
     "build:rust": "RUSTFLAGS='-C target-feature=-crt-static' npx cargo-cp-artifact -ac balena-systemd ./native/index.node -- cargo build --message-format=json-render-diagnostics",
     "build:rust:debug": "npm run build:rust --",
     "build:rust:release": "npm run build:rust -- --release",
-    "install": "node-pre-gyp install --fallback-to-build=false || (npm run build:rust:release && cargo clean)",
+    "install": "npm run build:node && npm run build:rust:release && cargo clean",
     "test": "echo 'No tests yet'",
     "test:integration": "mocha -r ts-node/register --bail --reporter spec tests/**/*.spec.ts",
     "test:compose": "docker compose -f docker-compose.test.yml up --build --remove-orphans --exit-code-from=sut ; npm run compose:down",
@@ -50,7 +52,7 @@
     "mocha": "^11.0.0",
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.7.3"
   },
   "versionist": {
     "publishedAt": "2025-04-10T15:22:52.713Z"

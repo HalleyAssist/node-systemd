@@ -25,3 +25,5 @@ features = ["napi-6", "channel-api", "promise-api"]
 opt-level = "z"
 codegen-units = 1
 lto = true
+strip = true
+panic = "abort"
