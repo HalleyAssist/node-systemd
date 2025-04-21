@@ -39,6 +39,7 @@
   "devDependencies": {
     "@balena/lint": "^8.0.0",
     "@types/chai": "^4.3.5",
+    "@mapbox/node-pre-gyp": "^1.0.11",
     "@types/chai-as-promised": "^7.1.5",
     "@types/mocha": "^10.0.1",
     "cargo-cp-artifact": "^0.1",
@@ -55,7 +56,6 @@
     "publishedAt": "2025-04-10T15:22:52.713Z"
   },
   "dependencies": {
-    "@mapbox/node-pre-gyp": "^1.0.11"
   },
   "binary": {
     "module_name": "index",
