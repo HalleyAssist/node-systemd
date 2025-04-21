@@ -17,7 +17,8 @@
     "typings/",
     "Cargo.toml",
     "Cargo.lock",
-    "tsconfig.release.json"
+    "tsconfig.release.json",
+    "tsconfig.json"
   ],
   "scripts": {
     "clean": "rimraf build native",
@@ -51,7 +52,7 @@
     "mocha": "^11.0.0",
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.7.3"
   },
   "versionist": {
     "publishedAt": "2025-04-10T15:22:52.713Z"

@@ -1,7 +1,11 @@
 declare module "*index.node" {
 	class SystemBus {
 		// Needed for typechecking
-		private static readonly __id: unique symbol;
+		private __id: unique symbol
+
+		// Do not allow direct instantiation
+		// or sub-classing
+		private constructor();
 	};
 
 	function system(): Promise<SystemBus>;
