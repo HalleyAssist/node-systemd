@@ -24,3 +24,4 @@ features = ["napi-6", "channel-api", "promise-api"]
 [profile.release]
 opt-level = "z"
 codegen-units = 1
+lto = true
