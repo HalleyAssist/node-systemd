@@ -15,6 +15,7 @@
     "build/",
     "src/",
     "typings/",
+    "lib/",
     "Cargo.toml",
     "Cargo.lock",
     "tsconfig.release.json",
